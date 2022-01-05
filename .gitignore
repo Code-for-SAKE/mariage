@@ -1,2 +1,4 @@
 __pycache__
 raw_data.txt
+model/
+log/

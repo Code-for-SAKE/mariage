@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>KIA 先端技術研究会2021 サンプルアプリ</title>
+    <title>KIA 先端技術研究会2021 おつまみに合う日本酒は？</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -36,76 +36,32 @@
       "
     >
       <h5 class="my-0 mr-md-auto font-weight-normal">
-        KIA 先端技術研究会2021 サンプルアプリ
+        KIA 先端技術研究会2021 おつまみに合う日本酒は？
       </h5>
       <div class="flex-grow-1"></div>
-      <a class="btn btn-outline-primary" id="start-chat" href="#"
-        >問い合わせを開始する</a
-      >
+      <button class="btn btn-outline-primary" id="start-chat">開始</button>
     </div>
     <div id="content" class="m-5">
-      <p id="count-area" class="m-2"></p>
-      <div class="mb-3">
-        <input
-          type="text"
-          class="form-control"
-          id="search-query"
-          placeholder="何を調べますか？"
-        />
-      </div>
-      <button id="text-search" class="btn btn-primary">検索する</button>
-      <ul id="search-result" class="mt-2"></ul>
-    </div>
-    <div class="botui-app-container" id="botui-app">
-      <!-- チャットの表示  -->
-      <bot-ui></bot-ui>
-    </div>
-    <footer class="fixed-bottom border-top p-3 bg-light">
-      Copyright (c) 2021 Mebius Corp.
-    </footer>
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">API Test</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+      <h2>研究テーマ</h2>
+      <p>私の研究は「おつまみに合う日本酒を教えてくれるチャットボット」です。</p>
+
+      <h2>成果</h2>
+      <p
+        >Bertの事前学習済みモデルに対する転移学習によって、おつまみを4つの日本酒のタイプに分類させる学習を行うことができました。</p
+      >
+      <div class="position-fixed end-0 p-3" id="bot-chat">
+        <div class="botui-app-container position-relative" id="botui-app">
+          <div class="m-2 position-absolute top-0 end-0">
+            <button class="btn btn-outline-primary" id="close-chat">X</button>
           </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label"
-                  >Input data:</label
-                >
-                <input type="text" class="form-control" id="recipient-name" />
-              </div>
-              <div class="mb-3">
-                <label for="message-text" class="col-form-label">Result:</label>
-                <textarea
-                  class="form-control"
-                  id="message-text"
-                  rows="5"
-                  readonly
-                ></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">送信する</button>
-          </div>
+          <!-- チャットの表示  -->
+          <bot-ui></bot-ui>  
         </div>
       </div>
     </div>
+    <footer class="fixed-bottom border-top p-3 bg-light">
+      Copyright (c) 2022 Code for SAKE
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"

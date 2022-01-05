@@ -26,4 +26,6 @@ RUN pip install \
   numpy \
   scikit-learn \
   fastapi \
+  tensorflow \
+  transformers["ja"] \
   uvicorn[standard]
