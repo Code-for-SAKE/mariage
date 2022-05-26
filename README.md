@@ -1,13 +1,20 @@
-# KIA 先端技術研究会 2021 デモ
+# 日本酒マリアージュ
+
+おつまみを入力すると合う日本酒の種類を教えてくれるチャットボット
+
+## tech
+
+- docker for dev
+- python3.9
+- pip3
+
 
 ## Getting started
 
 ```sh
 # Clone repository, and move to directory
-git clone https://github.com/mebius-yokohama/kia-demo.git
-cd kia-demo
-# Start application (listening on 80)
-docker compose up -d
+git clone https://github.com/Code-for-SAKE/mariage.git
+cd mariage
 ```
 
 - backend/data/modelにmodel.saveした内容を配置
@@ -19,6 +26,9 @@ docker compose up -d
 ```
 # 再ビルドして起動
 docker compose up --build
+
+# Start application (listening on 80)
+docker compose up -d
 ```
 
 
@@ -36,8 +46,16 @@ docker compose up --build
   - saved_model.pd
 
 ```
-cp /PATH/TO/frontend/nginx/conf.d/mariage.conf /etc/nginx/conf.d/mariage.conf
-sudo ln -s /PATH/TO/backend/mariage.service /etc/systemd/system/mariage.service
-sudo systemctl start mariage
-sudo systemctl start nginx
+# settings
+cp frontend/nginx/conf.d/mariage.conf /etc/nginx/conf.d/mariage.conf
+ln -s /PATH/TO/backend/mariage.service /etc/systemd/system/mariage.service
+
+# install
+dnf install nginx
+dnf install python39
+pip3 install -r backend/app/requirements.txt
+
+# start service
+systemctl start mariage
+systemctl start nginx
 ```
