@@ -10,6 +10,7 @@
 
 .botui-container {
     background-color: white;
+    max-height: 80vh;
 }
 
 .botui-actions-text-input {
