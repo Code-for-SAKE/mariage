@@ -19,3 +19,7 @@
 .botui-actions-text-submit {
     display: inline;
 }
+
+.botui-message-content.text {
+    white-space:pre-wrap; word-wrap:break-word;
+}
