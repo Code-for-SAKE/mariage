@@ -1,6 +1,6 @@
 (function () {
   // APIのベースURL
-  const API_BASE = "http://localhost/api";
+  const API_BASE = "/api";
   // クエリセレクタのエイリアス
   const qs = (selector) => document.querySelector(selector);
   // API一覧

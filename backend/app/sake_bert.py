@@ -38,7 +38,7 @@ class SakeBert:
                 custom_objects = {"TFBertModel": transformers.TFBertModel}
                 with tf.keras.utils.custom_object_scope(custom_objects):
                     logger.info('loading SakeBert')
-                    self.model = tf.keras.models.load_model("/data/model")
+                    self.model = tf.keras.models.load_model("../data/model")
             except:
                 logger.error('Error load SakeBert')
 
