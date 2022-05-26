@@ -1,0 +1,12 @@
+[Unit]
+Description=mariage sake
+After=network.target
+
+[Service]
+User=webmaster
+Group=nginx
+WorkingDirectory=/PATH/TO/backend/app
+ExecStart=/usr/bin/python3 server.py
+
+[Install]
+WantedBy=multi-user.target
