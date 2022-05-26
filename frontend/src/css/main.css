@@ -1,0 +1,25 @@
+#bot-chat {
+    z-index: 5;
+    bottom: 60px;
+    opacity: 0;
+}
+
+#bot-chat > div {
+    border: 1px solid #222222;
+}
+
+.botui-container {
+    background-color: transparent;
+}
+
+.botui-actions-text-input {
+    width: 80%;
+}
+
+.botui-actions-text-submit {
+    display: inline;
+}
+
+.botui-message-content.text {
+    white-space:pre-wrap; word-wrap:break-word;
+}

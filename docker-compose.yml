@@ -12,6 +12,7 @@ services:
     volumes:
       - ./frontend/src:/usr/share/nginx/html
       - ./frontend/nginx/conf.d:/etc/nginx/conf.d
+      - ./frontend/nginx/log:/var/log/nginx
     networks:
       - kia-demo-network
     restart: always
