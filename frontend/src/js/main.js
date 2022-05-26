@@ -49,24 +49,18 @@
 
       BOTUI.message
         .bot({
-          content: "こんにちは！",
+          content: "日本酒は好きですか?",
         })
         .then(function () {
           return BOTUI.message.add({
-            delay: 100,
-            content: "KIA 先端技術研究会テーマ2",
+            delay: 300,
+            content: "合うおつまみと一緒に飲むと、さらに日本酒を楽しめます。",
           });
         })
         .then(function () {
           return BOTUI.message.add({
             delay: 300,
-            content: "広がり続ける「自然言語処理」の可能性の研究",
-          });
-        })
-        .then(function () {
-          return BOTUI.message.add({
-            delay: 300,
-            content: "事前学習済みモデルをロード開始",
+            content: "事前学習済みモデルをロード開始\nしばらくお待ちください。",
           });
         })
         .then(function () {
